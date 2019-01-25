@@ -19,6 +19,8 @@ docker build . -t app1:1
 
 docker run --name app1c -d -p 9081:8080 app1:1
 
+http://127.0.0.1:9081/devopsarea-1.0/
+
 http://127.0.0.1:9085/app1
 
 cd ./app2
@@ -26,6 +28,8 @@ cd ./app2
 docker build . -t app2:1
 
 docker run --name app2c -d -p 9082:8080 app2:1
+
+http://127.0.0.1:9082/devopsarea-1.0/
 
 http://127.0.0.1:9085/app2
 

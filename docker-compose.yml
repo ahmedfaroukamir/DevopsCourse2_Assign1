@@ -1,0 +1,26 @@
+
+services:
+
+  app-1:
+    image: ahmedfaroukamir/docker_images:javaappimage1.1
+    ports:
+     - "9081:8081"
+    container_name: javaappcontainer1
+ 
+  app-2:
+    build: ./app2
+    ports:
+      - "9082:8082"
+    container_name: javaappcontainer2
+ 
+
+  reverseproxy:
+    image: ahmedfaroukamir/docker_images:reverseproxy1.1
+    ports:
+      - "80:80"
+    links:
+      - app-1
+      - app-2
+    container_name: reverseproxy1container
+  
+

@@ -3,11 +3,17 @@ if you want to create a reserve proxy for docker containers:
 
 
 cd reverseProxy
+
 docker build . -t reverseimage:1
+
 docker run --name rc1 -d -p 9085:80 reverseimage:1
+
 http://127.0.0.1:9085/
+
 http://127.0.0.1:9085/bbc
+
 http://127.0.0.1:9085/app1
+
 http://127.0.0.1:9085/app2
 
 

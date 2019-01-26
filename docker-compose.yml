@@ -4,14 +4,14 @@ services:
   app-1:
     image: ahmedfaroukamir/docker_images:javaappimage1.1
     ports:
-     - "9081:8081"
-    container_name: javaappcontainer1
+     - "9081:8080"
+    container_name: app1c
  
   app-2:
     build: ./app2
     ports:
-      - "9082:8082"
-    container_name: javaappcontainer2
+      - "9082:8080"
+    container_name: app2c
  
 
   reverseproxy:

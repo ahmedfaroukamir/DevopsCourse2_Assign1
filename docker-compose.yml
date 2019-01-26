@@ -1,4 +1,4 @@
-
+version: "3"
 services:
 
   app-1:
@@ -6,12 +6,16 @@ services:
     ports:
      - "9081:8080"
     container_name: app1c
+    networks:
+      - frontend
  
   app-2:
     build: ./app2
     ports:
       - "9082:8080"
     container_name: app2c
+    networks:
+      - frontend
  
 
   reverseproxy:
@@ -22,5 +26,9 @@ services:
       - app-1
       - app-2
     container_name: reverseproxy1container
-  
+    networks:
+      - frontend
 
+networks:
+  frontend:
+          #driver: custom-driver-1

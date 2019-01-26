@@ -3,6 +3,11 @@ Devops Course, 2nd session, 1st Assignment
 
 # create docker containers
 
+docker stop $(docker ps -aq)
+
+docker rm -f $(docker ps -qa)
+
+docker rmi -f $(docker images -q)
 
 cd reverseProxy
 

@@ -3,9 +3,15 @@ Devops Course, 2nd session, 1st Assignment
 
 # create docker containers
 
+sudo -i
+
+docker ps -a
+
 docker stop $(docker ps -aq)
 
 docker rm -f $(docker ps -qa)
+
+docker images
 
 docker rmi -f $(docker images -q)
 

@@ -55,7 +55,7 @@ docker tag app1:1 ahmedfaroukamir/docker_images:javaappimage1.1
 
 docker push ahmedfaroukamir/docker_images:javaappimage1.1
 
-docker-compose up
+docker-compose up -d
 
 #
 

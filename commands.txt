@@ -1,0 +1,30 @@
+docker pull nginx
+docker pull nginx:1.14.2
+docker images | grep nginx
+docker search nginx
+#shows also how many stars
+docker ps
+# only running containers
+docker ps -a
+docker start reversecontainer
+docker logs reversecontainer
+docker logs -f reversecontainer
+# last line
+docker history app1:1
+docker save app1 > app1.tar
+docker export  app1c > app1c.tar
+cat app1c.tar | docker import app1c2
+docker network ls
+docker exec -it reversecontainer /bin/bash
+exit
+docker stop app1c
+docker rm app1c
+docker rm -f app1c
+docker run -d --name mycontainer -v $pwd:/user/share/nginx/html -p 7878:80 nginx
+docker port app1c
+docker top app1c
+docker inspect app1c
+docker inspect app1c | grep IP
+docker cp hostfile app1c:/dockerpath/
+docker cp myfile app1c:/opt/
+

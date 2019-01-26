@@ -17,7 +17,7 @@ services:
   reverseproxy:
     image: ahmedfaroukamir/docker_images:reverseproxy1.1
     ports:
-      - "80:80"
+      - "9085:80"
     links:
       - app-1
       - app-2

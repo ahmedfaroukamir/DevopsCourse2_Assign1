@@ -35,6 +35,16 @@ http://127.0.0.1:9085/app2
 
 # OR run docker compose
 
+docker login 
+
+docker tag reverseimage:1 ahmedfaroukamir/docker_images:reverseproxy1.1
+
+docker push ahmedfaroukamir/docker_images:reverseproxy1.1
+
+docker tag app1:1 ahmedfaroukamir/docker_images:javaappimage1.1
+
+docker push ahmedfaroukamir/docker_images:javaappimage1.1
+
 docker-compose up
 
 #

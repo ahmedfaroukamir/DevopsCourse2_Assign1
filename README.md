@@ -15,6 +15,12 @@ docker images
 
 docker rmi -f $(docker images -q)
 
+docker rmi app1:1
+
+docker rmi app2:1
+
+docker rmi reverseimage:1
+
 cd app1
 
 docker build . -t app1:1
